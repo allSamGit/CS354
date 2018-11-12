@@ -1,0 +1,53 @@
+/*Print alhabet and number 0-9
+        Instruction to run program are below:
+
+        go compiler
+        go build alphabetnumber.go
+        ./alphabetnumber
+
+
+        gccgo compiler
+        gccgo -g alphabetnumber.go -o alphabetnumber
+        ./alphabetnumber
+*/
+
+package main
+
+import "fmt"
+
+func main() {
+
+        alphabet() //Call alhabet function
+        numbers() //Call numbers function
+
+}
+
+//Print the alphabet
+func alphabet() {
+        fmt.Println("Alhabet")
+
+        fmt.Print("[")
+        for i := 0; i < 26; i++ {
+                if i < 25 {
+                        fmt.Print("", string(65+i), ", ")
+                } else {
+                        fmt.Print(string(65 + i))
+                }
+        }
+        fmt.Print("]\n")
+}
+:
+//Print numbers 0-9
+func numbers() {
+        fmt.Println("\nNumbers")
+
+        fmt.Print("[")
+        for i := 0; i < 10; i++ {
+                if i == 9 {
+                        fmt.Print("", i)
+                } else {
+                        fmt.Print("", i, ", ")
+                }
+        }
+        fmt.Print("]\n")
+}
